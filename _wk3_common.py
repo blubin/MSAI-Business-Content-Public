@@ -13,9 +13,10 @@ setups without changing the import itself:
   repo into the Colab working directory before the `from _wk3_common
   import ...` line runs, so Python's default same-directory import
   resolution then finds it -- no student upload needed.
-- **Local/VS Code:** `.vscode/settings.json` puts `src/wk3` on `PYTHONPATH`
-  for the Jupyter kernel, so the import resolves the same way without the
-  notebook needing to locate itself in the repo.
+- **Local/VS Code:** `scripts/sync_jupytext.py` copies this file into
+  `output/wk3/` on every sync, so it ends up sitting right next to the
+  notebook there too, and the same same-directory import resolution just
+  works.
 """
 
 import urllib.error
